@@ -10,16 +10,20 @@ public class Cilindro extends Circulo{
         }
 
         public float calcVol(){
-            return (float)Math.PI*this.getRadio()*this.altura;
+            return super.calcArea()*this.altura;
         }
         @Override
         public float calcArea(){
             return (float)(2*Math.PI*getRadio()*altura)+(2*super.calcArea());
         }
 
-        @Override
+       /* @Override
         public String toString(){
             return "CILINDRO=[RADIO= "+this.getRadio()+"//ALTURA= "+this.altura+"//AREA DE BASE= "+this.calcArea()+
                     "//VOLUMEN= "+this.calcVol();
+        }*/
+        @Override
+        public String toString(){
+            return "CILINDRO=[SUBCLASE DE = "+super.toString()+"//ALTURA= "+this.altura+"//";
         }
 }
